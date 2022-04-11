@@ -106,7 +106,7 @@ def prepareAndCleanWebsite(driver):
 
 # Funcion principal del scraper
 
-def scrapWebsite(driver):
+def scrapWebsite(driver, is_a_test = True):
 
     try:
         prepareAndCleanWebsite(driver)
@@ -119,7 +119,7 @@ def scrapWebsite(driver):
 
         categories = driver.find_elements(by=By.CLASS_NAME, value="category-menu__item")
 
-        for category in categories:
+        for num_category,category in enumerate(categories):
 
             try:
                 if first_passed:
@@ -129,7 +129,10 @@ def scrapWebsite(driver):
                     first_passed = True
 
                 global_csv += getCsvFromCategory(driver, category,products_already_stored)
-
+                
+                # Hace un break al bucle para terminar el test
+                if is_a_test and num_category >= 5:
+                    break
 
             except Exception as e:
                 print(str(e))
