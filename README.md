@@ -13,6 +13,7 @@ El script se debe ejecutar de la siguiente manera:
 python ScraperMercadona.py
 ```
 
-
+DOI ZENODO:
+10.5281/zenodo.6449928
 
 
