@@ -1,4 +1,4 @@
-# ScraperMercadona
+# Scraper Mercadona
 
 
 Extrae los precios de diferentes alimentos de la página web de [Mercadona](https://tienda.mercadona.es/categories) 
